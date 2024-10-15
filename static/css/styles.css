@@ -1,0 +1,145 @@
+body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #000000; /* Black background */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .card-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid #0366d6; GitHub Blue border */
+        border-radius: 35px; /* Rounded corners */
+        transition: box-shadow 0.3s ease-in-out; /* Smooth transition for glow */
+      }
+
+      .card {
+        position: absolute;
+        width: 90%;
+
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border-radius: 35px;
+        background-color: #1e1e1e; /* Dark Gray for cards */
+      }
+
+      .profile-card {
+        z-index: 2; /* Top card */
+        height: 250px;
+        border: 2px solid #3c2a40; /* GitHub Blue border */
+      }
+
+      .social-card {
+        z-index: 1; /* Bottom card */
+        top: 50px; /* Initially slightly out of view */
+        opacity: 0; /* Initially invisible */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: 2px solid #0366d6;
+      }
+
+      .profile-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .social-icons {
+        display: flex;
+        padding-top: 110px;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        border-radius: 30%;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .social-link.github {
+        background-image: url("https://img.icons8.com/glyph-neue/64/FFFFFF/github.png");
+        background-color: #7c72ff; /* GitHub Purple */
+      }
+
+      .social-link.linkedin {
+        background-image: url("https://img.icons8.com/sf-black-filled/50/FFFFFF/linkedin.png");
+        background-color: #0077b5; /* LinkedIn Blue */
+      }
+
+      .social-link.instagram {
+        background: linear-gradient(
+          45deg,
+          #f09433,
+          #e6683c,
+          #dc2743,
+          #cc2366,
+          #bc1888
+        ); /* Main color for the Instagram icon */
+        transition: box-shadow 0.3s ease-in-out; /* Smooth transition for box shadow */
+      }
+      .social-link.certification {
+        background-image: url("https://img.icons8.com/?size=100&id=LIfHwTYyaxpV&format=png&color=000000");
+        background-color: #FFD700; /* Instagram Purple */
+      }
+
+      .social-link.github:hover {
+        box-shadow: 0 0 15px #0366d6; /* GitHub glow on hover */
+      }
+      .social-link.linkedin:hover {
+        box-shadow: 0 0 15px #0077b5; /* LinkedIn glow on hover */
+      }
+      
+      .social-link.instagram:hover {
+        box-shadow: 
+          0 0 10px rgba(240, 147, 51, 0.3), /* Orange shadow */
+          0 0 20px rgba(230, 104, 60, 0.3), /* Red shadow */
+          0 0 30px rgba(220, 39, 67, 0.3), /* Darker red shadow */
+          0 0 40px rgba(204, 35, 102, 0.3), /* Pink shadow */
+          0 0 50px rgba(188, 24, 136, 0.3); /* Purple shadow */
+      }
+      .social-link.certification:hover {
+        box-shadow: 0 0 15px #FFD700;
+      }
+
+      .card-container:hover .profile-card {
+        transform: translateY(-50px); /* Move the profile card up */
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Floating shadow */
+      }
+
+      .card-container:hover .social-card {
+        transform: translateY(50px); /* Move the social card down */
+        opacity: 1; /* Fade in the social card */
+      }
+
+      .social-card {
+        background-color: #1e1e1e; /* Dark Gray for social card */
+        opacity: 0; /* Initially hidden */
+      }
